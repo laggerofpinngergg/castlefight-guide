@@ -3,10 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CastleFight — Инструкция по игре</title>
+  <title>CastleFight — Инструкция по игре, Гайд, Тайминги, Тир-лист</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
+  <meta name="description" content="Полная инструкция и гайд по CastleFight: таблица урона, тайминги юнитов, тактика оттаймов, раскидка зелий и актуальный тир-лист игроков.">
+  <meta name="keywords" content="CastleFight, Castle Fight, гайд, инструкция, таблица урона, тайминги, оттаймы, тир-лист, стратегия">
+  <meta name="author" content="LaggerOfPinnGer">
+  <meta property="og:title" content="CastleFight: Полный гайд, тайминги и актуальный Тир-лист">
+  <meta property="og:description" content="Изучите таблицу урона, освойте тайминги и тактику оттаймов. Все, чтобы стать топовым игроком CastleFight.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="[АДРЕС ВАШЕГО САЙТА]">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CastleFight: Полный гайд, тайминги и актуальный Тир-лист">
+  <meta name="twitter:description" content="Изучите таблицу урона, освойте тайминги и тактику оттаймов. Все, чтобы стать топовым игроком CastleFight.">
+  <style>
     :root {
       --bg: #f4f4f9;
       --text: #333;
@@ -25,7 +36,6 @@
       --info-bg: #2c2c2c;
       --table-border: #555;
     }
-
     html {
       scroll-behavior: smooth;
     }
@@ -51,7 +61,6 @@
     h1 {
       color: var(--text);
     }
-
     nav {
       background-color: var(--accent);
       padding: 15px;
@@ -72,7 +81,6 @@
     nav a:hover, nav a.active {
       color: var(--hover);
     }
-
     section {
       margin-bottom: 40px;
       padding: 20px;
@@ -86,7 +94,6 @@
       border-bottom: 2px solid var(--accent);
       padding-bottom: 10px;
     }
-
     /* Введение и инфо-блоки */
     .intro, .example, .how-to-read {
       margin: 20px 0;
@@ -96,8 +103,7 @@
       color: var(--text);
       transition: background 0.3s, color 0.3s;
     }
-
-    /* Таблица */
+    /* Таблица урона */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -122,7 +128,6 @@
     [data-theme="dark"] tr:nth-child(even) {
       background-color: #333;
     }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -140,7 +145,6 @@
     footer a:hover {
       color: #fff;
     }
-
     /* Кнопка темы */
     .theme-toggle {
       position: fixed;
@@ -159,14 +163,12 @@
     .theme-toggle:hover {
       background: #8b0000;
     }
-
     .about-site {
       font-size: 0.9em;
       color: #ccc;
       margin-top: 10px;
     }
   </style>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MG2T3PM3V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -174,32 +176,28 @@
     gtag('js', new Date());
     gtag('config', 'G-4MG2T3PM3V');
   </script>
-  </head>
-
+</head>
 <body>
   <button class="theme-toggle" id="theme-toggle" title="Переключить тему">
     <i class="fa-solid fa-moon"></i>
   </button>
-
   <header>
     <div class="logo">CastleFight</div>
     <h1>Инструкция по игре CastleFight</h1>
   </header>
-
   <div class="intro">
     <h2>Введение</h2>
     <p>CastleFight — это динамичная стратегия в реальном времени, где игроки строят базы, создают армии и сражаются за контроль над картой. Этот гайд не охватывает абсолютно все аспекты и тонкости игры. Он создан специально для <strong>начинающих игроков</strong>, которые уже освоили базовые механики и хотят улучшить свои стратегические навыки.</p>
   </div>
-
   <nav>
     <a href="#damage-table">Таблица урона</a>
     <a href="#timings">Тайминги</a>
     <a href="#off-timings">Оттаймы</a>
     <a href="#potion-distribution">Раскидка зелий</a>
-    <a href="#tier-list">Тир-лист игроков</a>
-    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank">Тир-лист (ссылка)</a>
+    <a href="#destruction">Уничтожение</a>
+    <a href="#placement">Расстановка</a>
+    <a href="#tier-list">Тир-лист</a>
   </nav>
-
   <section id="damage-table">
     <h2>Таблица урона</h2>
     <table>
@@ -236,7 +234,6 @@
       <p><strong>Значение:</strong> Каждое число в таблице показывает процент урона, который пробивает данную защиту.</p>
     </div>
   </section>
-
   <section id="timings">
     <h2>Тайминги</h2>
     <p>Тайминг — это искусство правильного управления выходом юнитов, чтобы они формировали сильный и слаженный стак для максимального эффекта. Для этого рекомендуется управлять спавном вручную, а не через автоматическую кнопку.</p>
@@ -248,7 +245,6 @@
     </ul>
     <p>Правильный тайминг позволяет вашим юнитам работать как единая машина, принося максимальную пользу в бою.</p>
   </section>
-
   <section id="off-timings">
     <h2>Оттаймы</h2>
     <p>Оттаймы — это стратегический приём, который позволяет переломить ход игры. Если вы видите, что с каждой волной стак противника становится больше, это сигнал к использованию оттайма.</p>
@@ -260,7 +256,6 @@
     </ul>
     <p>Таким образом, оттайм — это не бездействие, а тактическое отступление для подготовки к решающей контратаке.</p>
   </section>
-
   <section id="potion-distribution">
     <h2>Раскидка зелий</h2>
     <p>Правильная раскидка зелий — ключ к победе. Вот подробное руководство по их применению в разных ситуациях:</p>
@@ -281,14 +276,61 @@
       </li>
     </ul>
   </section>
+  <section id="destruction">
+    <h2>Уничтожение</h2>
+    <p>Уничтожение — мощный инструмент, который применяется как в обороне, так и в атаке. Правильное использование позволяет перехватить инициативу и разрушить планы противника.</p>
+    <p><strong>В обороне:</strong></p>
+    <ul>
+      <li>Если вы видите, что стак противника сильнее вашего и перебьёт его, немедленно остановите спавн всех зданий.</li>
+      <li>Взорвите уничтожение либо сразу после выхода вашего стака, либо подождите, пока вражеский стак подойдёт ближе.</li>
+      <li>При преобладании дальников в вашем стаке они замедлятся, но это даст шанс превратить ситуацию в дабл-стак в вашу пользу.</li>
+      <li>При преобладании ближников они ускорятся, что предотвратит дабл-стак и позволит быстрее контратаковать.</li>
+    </ul>
+    <p><strong>В атаке:</strong></p>
+    <ul>
+      <li>Кидайте уничтожение на базе противника сразу после того, как он выпустил юнитов и ваши юниты заагрились на них.</li>
+      <li>Ближники ускорятся и быстрее дойдут до цели.</li>
+      <li>Дальники замедлятся, но без проблем пройдут до замка, так как вражеские юниты уже не выйдут так быстро и не будут мешать.</li>
+    </ul>
+    <p><strong>Важное замечание:</strong> Перед атакой убедитесь, что противник уже использовал своё замедление и не сможет применить его снова. Это гарантирует лёгкий проход к его замку.</p>
+  </section>
+  <section id="placement">
+    <h2>Расстановка</h2>
+    <p>Правильная расстановка зданий — ключ к эффективному спавну и синхронизации юнитов. После обновления с мех-станцией оптимальным вариантом стало размещение <strong>всех зданий в круг</strong> — как обычных, так и специальных.</p>
+    
+    <div class="intro">
+      <h3>Идеальная схема:</h3>
+      <ul>
+        <li><strong>По центру:</strong> Мех-станция.</li>
+        <li><strong>Вокруг неё:</strong> 8 зданий любых — хоть спецздания, хоть обычные (всего 9 зданий в общей схеме).</li>
+      </ul>
+    </div>
 
+    <div class="example">
+      <h3>Расстановка по скорости:</h3>
+      <p>Расставляйте здания так, как вам удобнее таймить. Учитывайте скорость юнитов, которые из них выходят:</p>
+      <ul>
+        <li><strong>Медленных юнитов</strong> (танки, тяжёлые) — ставьте <strong>ближе к дороге</strong>.</li>
+        <li><strong>Более быстрых юнитов</strong> (дальники, лёгкие) — ставьте <strong>дальше от дороги</strong>.</li>
+      </ul>
+      <p>Так медленные выходят первыми и сразу идут по дороге, быстрые догоняют сзади — стак синхронизируется идеально!</p>
+      
+      <h4>Пример: не на всех юнитах нужны мех-станции</h4>
+      <p><strong>Можно ставить мех-станции не на всех юнитах!</strong> Делайте отдельные круги:</p>
+      <ul>
+        <li><strong>Круг 1:</strong> 9 пауков <em>без мех-станции</em>.</li>
+        <li><strong>Круг 2:</strong> 8 служителей (предков) <em>с мех-станцией</em> в центре.</li>
+        <li><strong>Оставшиеся слоты:</strong> Мех-станция на спецздания + легендарки.</li>
+      </ul>
+      <p><strong>Почему так делаем:</strong> Спавн-рейт пауков будет практически равен спавн-рейту предков с мех-станцией.</p>
+    </div>
+  </section>
   <section id="tier-list">
     <h2>Тир-лист игроков</h2>
-    <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков по их силе. Как и в других соревновательных играх, он помогает определить, кто является топовым игроком в сообществе CastleFight на данный момент. Ранжирование происходит от самых сильных игроков (Tier S, A) до менее сильных (Tier C, D). Обычно такие списки составляются на основе результатов турниров, стабильности игры и достижений в сообществе.</p>
-    <p>Для просмотра актуального тир-листа перейдите по ссылке:
-    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><strong>Смотреть Тир-лист игроков</strong></a></p>
+    <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков сообщества CastleFight по их силе и стратегическому мастерству. Ранжирование происходит от самых сильных игроков (T1) до менее опытных или неактивных (T5). Оценка основана на результатах турниров, калибровочных матчей и общей активности. Игроки, размещённые выше в тире, считаются сильнее.</p>
+    <p>Актуальный тир-лист ведётся в отдельном документе и регулярно обновляется. Он включает подробное распределение по тирам с именами игроков и примечаниями.</p>
+    <p><a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><strong>Открыть актуальный Тир-лист игроков</strong></a></p>
   </section>
-
   <footer>
     <p>Присоединяйтесь к сообществу CastleFight:</p>
     <a href="https://discord.gg/castlefight" target="_blank"><i class="fab fa-discord"></i> Discord</a>
@@ -299,7 +341,6 @@
       Автор сайта: <strong>LaggerOfPinnGer</strong>
     </div>
   </footer>
-
   <script>
     const navLinks = document.querySelectorAll('nav a');
     window.addEventListener('scroll', () => {
@@ -317,7 +358,6 @@
         }
       });
     });
-
     const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn.addEventListener('click', () => {
       const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -325,7 +365,6 @@
       localStorage.setItem('theme', theme);
       toggleBtn.innerHTML = theme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
     });
-
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       document.documentElement.setAttribute('data-theme', savedTheme);
