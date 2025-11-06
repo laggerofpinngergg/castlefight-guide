@@ -1,314 +1,336 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инструкция по игре CastleFight</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CastleFight — Инструкция по игре</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .logo {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #8b0000;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            margin: 0;
-        }
-        .logo img {
-            max-width: 200px;
-            height: auto;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-top: 10px;
-        }
-        nav {
-            background-color: #2c3e50;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover, nav a.active {
-            color: #e6f3ff;
-        }
-        section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #2c3e50;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #e6f3ff;
-        }
-        .example, .how-to-read, .intro {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #e8f4f8;
-            border-left: 5px solid #2c3e50;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: #fff;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        footer a {
-            color: #e6f3ff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        footer a:hover {
-            color: #fff;
-        }
-        footer i {
-            margin-right: 8px;
-        }
-        .author {
-            color: #e6f3ff;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-    </style>
-</head>
+    :root {
+      --bg: #f4f4f9;
+      --text: #333;
+      --card: #fff;
+      --accent: #2c3e50;
+      --hover: #e6f3ff;
+      --info-bg: #e8f4f8;
+      --table-border: #ccc;
+    }
+    [data-theme="dark"] {
+      --bg: #1e1e1e;
+      --text: #e4e4e4;
+      --card: #2a2a2a;
+      --accent: #8b0000;
+      --hover: #3c3c3c;
+      --info-bg: #2c2c2c;
+      --table-border: #555;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Georgia', serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: var(--accent);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      color: var(--text);
+    }
+
+    nav {
+      background-color: var(--accent);
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: var(--hover);
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: var(--card);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    /* Введение и инфо-блоки */
+    .intro, .example, .how-to-read {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: var(--info-bg);
+      border-left: 5px solid var(--accent);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Таблица */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 15px;
+      border: 1px solid var(--table-border);
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--table-border);
+      text-align: center;
+    }
+    th {
+      background-color: var(--accent);
+      color: #fff;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: var(--hover);
+    }
+    [data-theme="dark"] tr:nth-child(even) {
+      background-color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--accent);
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #e6f3ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2em;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Кнопка темы */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+    .theme-toggle:hover {
+      background: #8b0000;
+    }
+
+    .about-site {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MG2T3PM3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4MG2T3PM3V');
+  </script>
+  </head>
+
 <body>
-    <header>
-        <div class="logo">
-            CastleFight
-        </div>
-        <h1>Инструкция по игре CastleFight</h1>
-    </header>
+  <button class="theme-toggle" id="theme-toggle" title="Переключить тему">
+    <i class="fa-solid fa-moon"></i>
+  </button>
 
-    <div class="intro">
-        <h2>Введение</h2>
-        <p>CastleFight — это динамичная стратегия в реальном времени, где игроки строят базы, создают армии и сражаются за контроль над картой. Этот гайд не охватывает абсолютно все аспекты и тонкости игры. Он создан специально для **начинающих игроков**, которые уже освоили базовые механики и хотят улучшить свои стратегические навыки.</p>
+  <header>
+    <div class="logo">CastleFight</div>
+    <h1>Инструкция по игре CastleFight</h1>
+  </header>
+
+  <div class="intro">
+    <h2>Введение</h2>
+    <p>CastleFight — это динамичная стратегия в реальном времени, где игроки строят базы, создают армии и сражаются за контроль над картой. Этот гайд не охватывает абсолютно все аспекты и тонкости игры. Он создан специально для <strong>начинающих игроков</strong>, которые уже освоили базовые механики и хотят улучшить свои стратегические навыки.</p>
+  </div>
+
+  <nav>
+    <a href="#damage-table">Таблица урона</a>
+    <a href="#timings">Тайминги</a>
+    <a href="#off-timings">Оттаймы</a>
+    <a href="#potion-distribution">Раскидка зелий</a>
+    <a href="#tier-list">Тир-лист игроков</a>
+    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank">Тир-лист (ссылка)</a>
+  </nav>
+
+  <section id="damage-table">
+    <h2>Таблица урона</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Тип урона</th>
+          <th>Без защиты</th>
+          <th>Лёгкая</th>
+          <th>Средняя</th>
+          <th>Тяжёлая</th>
+          <th>Укреплённая</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Режущий</td><td>105%</td><td>55%</td><td>190%</td><td>90%</td><td>50%</td></tr>
+        <tr><td>Колющий</td><td>105%</td><td>190%</td><td>90%</td><td>55%</td><td>40%</td></tr>
+        <tr><td>Магический</td><td>105%</td><td>90%</td><td>55%</td><td>190%</td><td>40%</td></tr>
+        <tr><td>Осадный</td><td>105%</td><td>55%</td><td>55%</td><td>55%</td><td>190%</td></tr>
+        <tr><td>Хаос</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr>
+      </tbody>
+    </table>
+    <div class="example">
+      <h3>Пример:</h3>
+      <ul>
+        <li>Режущий урон по средней броне наносит <strong>190%</strong> урона от базового.</li>
+        <li>Магический урон по тяжёлой броне наносит <strong>190%</strong> урона от базового.</li>
+        <li>Осадный урон по укреплённой защите наносит <strong>190%</strong> урона от базового.</li>
+      </ul>
     </div>
+    <div class="how-to-read">
+      <h3>Как читать таблицу:</h3>
+      <p><strong>Строки:</strong> Каждая строка представляет тип урона (режущий, колющий, магический, осадный, хаос).</p>
+      <p><strong>Столбцы:</strong> Каждый столбец представляет тип защиты (Без защиты, Лёгкая, Средняя, Тяжёлая, Укреплённая).</p>
+      <p><strong>Значение:</strong> Каждое число в таблице показывает процент урона, который пробивает данную защиту.</p>
+    </div>
+  </section>
 
-    <nav>
-        <a href="#damage-table">Таблица урона</a>
-        <a href="#timings">Тайминги</a>
-        <a href="#off-timings">Оттаймы</a>
-        <a href="#potion-distribution">Раскидка зелий</a>
-        <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank">Тир-лист</a>
-    </nav>
+  <section id="timings">
+    <h2>Тайминги</h2>
+    <p>Тайминг — это искусство правильного управления выходом юнитов, чтобы они формировали сильный и слаженный стак для максимального эффекта. Для этого рекомендуется управлять спавном вручную, а не через автоматическую кнопку.</p>
+    <p><strong>Вот как это сделать:</strong></p>
+    <ul>
+      <li><strong>Синхронизация по скорости:</strong> Запускайте юнитов поочередно, начиная с самых медленных. Это позволит быстрым юнитам догнать их, и весь ваш стак будет двигаться как единое целое.</li>
+      <li><strong>Порядок построения:</strong> Убедитесь, что впереди идут те юниты, которые предназначены для поглощения урона (танки), а позади — юниты, которые наносят урон (уронники) или поддерживают их (саппорты).</li>
+      <li><strong>Наблюдение за противником:</strong> Время, необходимое для синхронизации, зависит от скорости ваших юнитов и расстояния до противника. Потренируйтесь, чтобы научиться «ловить» этот идеальный момент.</li>
+    </ul>
+    <p>Правильный тайминг позволяет вашим юнитам работать как единая машина, принося максимальную пользу в бою.</p>
+  </section>
 
-    <section id="damage-table">
-        <h2>Таблица урона</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Тип урона</th>
-                    <th>Без защиты</th>
-                    <th>Лёгкая защита</th>
-                    <th>Средняя защита</th>
-                    <th>Тяжёлая защита</th>
-                    <th>Укреплённая защита</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Режущий</td>
-                    <td>105%</td>
-                    <td>55%</td>
-                    <td>190%</td>
-                    <td>90%</td>
-                    <td>50%</td>
-                </tr>
-                <tr>
-                    <td>Колющий</td>
-                    <td>105%</td>
-                    <td>190%</td>
-                    <td>90%</td>
-                    <td>55%</td>
-                    <td>40%</td>
-                </tr>
-                <tr>
-                    <td>Магический</td>
-                    <td>105%</td>
-                    <td>90%</td>
-                    <td>55%</td>
-                    <td>190%</td>
-                    <td>40%</td>
-                </tr>
-                <tr>
-                    <td>Осадный</td>
-                    <td>105%</td>
-                    <td>55%</td>
-                    <td>55%</td>
-                    <td>55%</td>
-                    <td>190%</td>
-                </tr>
-                <tr>
-                    <td>Хаос</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="example">
-            <h3>Пример:</h3>
-            <ul>
-                <li>Режущий урон по средней броне наносит <strong>190%</strong> урона от базового.</li>
-                <li>Магический урон по тяжёлой броне наносит <strong>190%</strong> урона от базового.</li>
-                <li>Осадный урон по укреплённой защите наносит <strong>190%</strong> урона от базового.</li>
-            </ul>
-        </div>
-        <div class="how-to-read">
-            <h3>Как читать таблицу:</h3>
-            <p><strong>Строки:</strong> Каждая строка представляет тип урона (режущий, колющий, магический, осадный, хаос).</p>
-            <p><strong>Столбцы:</strong> Каждый столбец представляет тип защиты (Без защиты, Лёгкая, Средняя, Тяжёлая, Укреплённая).</p>
-            <p><strong>Значение:</strong> Каждое число в таблице показывает процент урона, который пробивает данную защиту.</p>
-        </div>
-    </section>
+  <section id="off-timings">
+    <h2>Оттаймы</h2>
+    <p>Оттаймы — это стратегический приём, который позволяет переломить ход игры. Если вы видите, что с каждой волной стак противника становится больше, это сигнал к использованию оттайма.</p>
+    <p><strong>Как это работает:</strong></p>
+    <ul>
+      <li><strong>Остановите спавн:</strong> Перестаньте создавать юнитов из всех зданий.</li>
+      <li><strong>Примите бой на своей базе:</strong> Позвольте вражескому стаку войти на вашу территорию. Это позволит вам эффективно сражаться на знакомой местности, используя своего героя и зелья.</li>
+      <li><strong>Накопите силы для пуша:</strong> Пока вы будете разбирать вражеский стак на своей базе, ваши юниты будут постепенно накапливаться, создавая мощную армию. После того как вы уничтожите врага, вы сможете использовать эту накопленную силу для мощного контр-пуша.</li>
+    </ul>
+    <p>Таким образом, оттайм — это не бездействие, а тактическое отступление для подготовки к решающей контратаке.</p>
+  </section>
 
-    <section id="timings">
-        <h2>Тайминги</h2>
-        <p>Тайминг — это искусство правильного управления выходом юнитов, чтобы они формировали сильный и слаженный стак для максимального эффекта. Для этого рекомендуется управлять спавном вручную, а не через автоматическую кнопку.</p>
-        <p><strong>Вот как это сделать:</strong></p>
+  <section id="potion-distribution">
+    <h2>Раскидка зелий</h2>
+    <p>Правильная раскидка зелий — ключ к победе. Вот подробное руководство по их применению в разных ситуациях:</p>
+    <ul>
+      <li><strong>Зелье урона</strong>: Используйте в момент столкновения с вражеским стаком, чтобы увеличить наносимый урон на более продолжительное время.</li>
+      <li><strong>Зелье здоровья</strong>:
         <ul>
-            <li><strong>Синхронизация по скорости:</strong> Запускайте юнитов поочередно, начиная с самых медленных. Это позволит быстрым юнитам догнать их, и весь ваш стак будет двигаться как единое целое.</li>
-            <li><strong>Порядок построения:</strong> Убедитесь, что впереди идут те юниты, которые предназначены для поглощения урона (танки), а позади — юниты, которые наносят урон (уронники) или поддерживают их (саппорты).</li>
-            <li><strong>Наблюдение за противником:</strong> Время, необходимое для синхронизации, зависит от скорости ваших юнитов и расстояния до противника. Потренируйтесь, чтобы научиться «ловить» этот идеальный момент.</li>
+          <li>Применяйте, когда на карте уже много ваших юнитов. Чем больше их количество, тем выше общий эффект. Бросайте его, когда у юнитов уже мало здоровья, чтобы получить максимальный эффект.</li>
+          <li>Также идеально подходит для лечения <strong>легендарных юнитов</strong>, которые имеют высокие показатели здоровья и наносят большой урон.</li>
         </ul>
-        <p>Правильный тайминг позволяет вашим юнитам работать как единая машина, принося максимальную пользу в бою.</p>
-    </section>
-
-    <section id="off-timings">
-        <h2>Оттаймы</h2>
-        <p>Оттаймы — это стратегический приём, который позволяет переломить ход игры. Если вы видите, что с каждой волной стак противника становится больше, это сигнал к использованию оттайма.</p>
-        <p><strong>Как это работает:</strong></p>
+      </li>
+      <li><strong>Зелье замедления</strong>:
         <ul>
-            <li><strong>Остановите спавн:</strong> Перестаньте создавать юнитов из всех зданий.</li>
-            <li><strong>Примите бой на своей базе:</strong> Позвольте вражескому стаку войти на вашу территорию. Это позволит вам эффективно сражаться на знакомой местности, используя своего героя и зелья.</li>
-            <li><strong>Накопите силы для пуша:</strong> Пока вы будете разбирать вражеский стак на своей базе, ваши юниты будут постепенно накапливаться, создавая мощную армию. После того как вы уничтожите врага, вы сможете использовать эту накопленную силу для мощного контр-пуша.</li>
+          <li>Если вражеский стак состоит из юнитов ближнего боя, бросьте зелье, когда часть их стака уже заагрилась на ваших юнитов дальнего боя. Так вы разделите стак на две части и сможете легче его уничтожить.</li>
+          <li>При нападении на базу противника (пуше), используйте зелье, когда его юниты только вышли из зданий. Это позволит вам уничтожить их намного быстрее.</li>
+          <li>При обороне своей базы, важно бросить зелье в момент, когда у врага здания заполнились на половину. Это замедлит их юнитов, и вы не столкнетесь сразу с "дабл стаком" (двойной волной).</li>
         </ul>
-        <p>Таким образом, оттайм — это не бездействие, а тактическое отступление для подготовки к решающей контратаке.</p>
-    </section>
+      </li>
+    </ul>
+  </section>
 
-    <section id="potion-distribution">
-        <h2>Раскидка зелий</h2>
-        <p>Правильная раскидка зелий — ключ к победе. Вот подробное руководство по их применению в разных ситуациях:</p>
-        <ul>
-            <li><strong>Зелье урона</strong>: Используйте в момент столкновения с вражеским стаком, чтобы увеличить наносимый урон на более продолжительное время.</li>
-            <li><strong>Зелье здоровья</strong>:
-                <ul>
-                    <li>Применяйте, когда на карте уже много ваших юнитов. Чем больше их количество, тем выше общий эффект. Бросайте его, когда у юнитов уже мало здоровья, чтобы получить максимальный эффект.</li>
-                    <li>Также идеально подходит для лечения <strong>легендарных юнитов</strong>, которые имеют высокие показатели здоровья и наносят большой урон.</li>
-                </ul>
-            </li>
-            <li><strong>Зелье замедления</strong>:
-                <ul>
-                    <li>Если вражеский стак состоит из юнитов ближнего боя, бросьте зелье, когда часть их стака уже заагрилась на ваших юнитов дальнего боя. Так вы разделите стак на две части и сможете легче его уничтожить.</li>
-                    <li>При нападении на базу противника (пуше), используйте зелье, когда его юниты только вышли из зданий. Это позволит вам уничтожить их намного быстрее.</li>
-                    <li>При обороне своей базы, важно бросить зелье в момент, когда у врага здания заполнились на половину. Это замедлит их юнитов, и вы не столкнетесь сразу с "дабл стаком" (двойной волной).</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+  <section id="tier-list">
+    <h2>Тир-лист игроков</h2>
+    <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков по их силе. Как и в других соревновательных играх, он помогает определить, кто является топовым игроком в сообществе CastleFight на данный момент. Ранжирование происходит от самых сильных игроков (Tier S, A) до менее сильных (Tier C, D). Обычно такие списки составляются на основе результатов турниров, стабильности игры и достижений в сообществе.</p>
+    <p>Для просмотра актуального тир-листа перейдите по ссылке:
+    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><strong>Смотреть Тир-лист игроков</strong></a></p>
+  </section>
 
-    <section id="tier-list">
-        <h2>Тир-лист игроков</h2>
-        <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков по их силе. Как и в других соревновательных играх, он помогает определить, кто является топовым игроком в сообществе CastleFight на данный момент. Ранжирование происходит от самых сильных игроков (Tier S, A) до менее сильных (Tier C, D). Обычно такие списки составляются на основе результатов турниров, стабильности игры и достижений в сообществе.</p>
-        <p>Для просмотра актуального тир-листа перейдите по ссылке:
-        <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><strong>Смотреть Тир-лист игроков</strong></a></p>
-    </section>
+  <footer>
+    <p>Присоединяйтесь к сообществу CastleFight:</p>
+    <a href="https://discord.gg/castlefight" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+    <a href="https://t.me/kasdo_production" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><i class="fa-solid fa-star"></i> Тир-лист</a>
+    <div class="about-site">
+      Версия сайта: <strong>v1.3.2</strong> • Обновлено: 06.11.2025<br>
+      Автор сайта: <strong>LaggerOfPinnGer</strong>
+    </div>
+  </footer>
 
-    <footer>
-        <p>Присоединяйтесь к сообществу CastleFight:</p>
-        <a href="https://discord.gg/castlefight" target="_blank"><i class="fab fa-discord"></i>Discord</a>
-        <a href="https://t.me/kasdo_production" target="_blank"><i class="fab fa-telegram"></i>Telegram</a>
-        <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><i class="fa-solid fa-star"></i>Тир-лист</a>
-        <p class="author"></p>
-    </footer>
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('section').forEach(sec => {
+        const top = window.scrollY;
+        // Учитываем высоту навигации (прилипающего элемента)
+        if (top >= sec.offsetTop - 120) current = sec.getAttribute('id');
+      });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        // Проверяем, является ли ссылка внутренней
+        if (a.getAttribute('href').startsWith('#') && a.getAttribute('href').substring(1) === current) {
+             a.classList.add('active');
+        }
+      });
+    });
 
-    <script>
-        // Подсветка активного раздела в навигации
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function() {
-                // Игнорируем внешние ссылки
-                if (this.getAttribute('href').startsWith('http')) {
-                    return;
-                }
-                document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      toggleBtn.innerHTML = theme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    });
 
-        // Подсветка текущего раздела при прокрутке
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            let currentSection = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === currentSection) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      toggleBtn.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    }
+  </script>
 </body>
 </html>
