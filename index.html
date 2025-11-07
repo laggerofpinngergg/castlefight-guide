@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CastleFight — Инструкция по игре, Гайд, Тайминги, Тир-лист</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://laggerofpinngergg.github.io/castlefight-guide/">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="description" content="Полная инструкция и гайд по CastleFight: таблица урона, тайминги юнитов, тактика оттаймов, раскидка зелий и актуальный тир-лист игроков.">
   <meta name="keywords" content="CastleFight, Castle Fight, гайд, инструкция, таблица урона, тайминги, оттаймы, тир-лист, стратегия">
@@ -12,7 +13,7 @@
   <meta property="og:title" content="CastleFight: Полный гайд, тайминги и актуальный Тир-лист">
   <meta property="og:description" content="Изучите таблицу урона, освойте тайминги и тактику оттаймов. Все, чтобы стать топовым игроком CastleFight.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="[АДРЕС ВАШЕГО САЙТА]">
+  <meta property="og:url" content="https://laggerofpinngergg.github.io/castlefight-guide/">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CastleFight: Полный гайд, тайминги и актуальный Тир-лист">
@@ -36,9 +37,7 @@
       --info-bg: #2c2c2c;
       --table-border: #555;
     }
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Georgia', serif;
       max-width: 1000px;
@@ -48,19 +47,9 @@
       color: var(--text);
       transition: background 0.3s, color 0.3s;
     }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .logo {
-      font-size: 2.5em;
-      font-weight: bold;
-      color: var(--accent);
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    h1 {
-      color: var(--text);
-    }
+    header { text-align: center; margin-bottom: 30px; }
+    .logo { font-size: 2.5em; font-weight: bold; color: var(--accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+    h1 { color: var(--text); }
     nav {
       background-color: var(--accent);
       padding: 15px;
@@ -78,15 +67,13 @@
       font-weight: bold;
       transition: color 0.3s;
     }
-    nav a:hover, nav a.active {
-      color: var(--hover);
-    }
+    nav a:hover, nav a.active { color: var(--hover); }
     section {
       margin-bottom: 40px;
       padding: 20px;
       background-color: var(--card);
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: background 0.3s;
     }
     h2 {
@@ -94,7 +81,6 @@
       border-bottom: 2px solid var(--accent);
       padding-bottom: 10px;
     }
-    /* Введение и инфо-блоки */
     .intro, .example, .how-to-read {
       margin: 20px 0;
       padding: 15px;
@@ -103,7 +89,6 @@
       color: var(--text);
       transition: background 0.3s, color 0.3s;
     }
-    /* Таблица урона */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -122,12 +107,8 @@
       color: #fff;
       font-weight: 600;
     }
-    tr:nth-child(even) {
-      background-color: var(--hover);
-    }
-    [data-theme="dark"] tr:nth-child(even) {
-      background-color: #333;
-    }
+    tr:nth-child(even) { background-color: var(--hover); }
+    [data-theme="dark"] tr:nth-child(even) { background-color: #333; }
     footer {
       text-align: center;
       padding: 20px;
@@ -142,10 +123,7 @@
       margin: 0 15px;
       font-size: 1.2em;
     }
-    footer a:hover {
-      color: #fff;
-    }
-    /* Кнопка темы */
+    footer a:hover { color: #fff; }
     .theme-toggle {
       position: fixed;
       top: 20px;
@@ -160,14 +138,21 @@
       box-shadow: 0 3px 8px rgba(0,0,0,0.3);
       transition: background 0.3s;
     }
-    .theme-toggle:hover {
-      background: #8b0000;
+    .theme-toggle:hover { background: #8b0000; }
+    .about-site { font-size: 0.9em; color: #ccc; margin-top: 10px; }
+    .formula {
+      background: #111;
+      color: #0f0;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.15em;
+      font-weight: bold;
+      display: inline-block;
+      margin: 8px 0;
+      box-shadow: 0 0 10px rgba(0,255,0,0.2);
     }
-    .about-site {
-      font-size: 0.9em;
-      color: #ccc;
-      margin-top: 10px;
-    }
+    .formula-big { font-size: 1.4em; padding: 14px 20px; }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MG2T3PM3V"></script>
   <script>
@@ -196,6 +181,7 @@
     <a href="#potion-distribution">Раскидка зелий</a>
     <a href="#destruction">Уничтожение</a>
     <a href="#placement">Расстановка</a>
+    <a href="#formulas">Формулы</a>
     <a href="#tier-list">Тир-лист</a>
   </nav>
   <section id="damage-table">
@@ -229,9 +215,9 @@
     </div>
     <div class="how-to-read">
       <h3>Как читать таблицу:</h3>
-      <p><strong>Строки:</strong> Каждая строка представляет тип урона (режущий, колющий, магический, осадный, хаос).</p>
-      <p><strong>Столбцы:</strong> Каждый столбец представляет тип защиты (Без защиты, Лёгкая, Средняя, Тяжёлая, Укреплённая).</p>
-      <p><strong>Значение:</strong> Каждое число в таблице показывает процент урона, который пробивает данную защиту.</p>
+      <p><strong>Строки:</strong> Каждая строка — тип урона.</p>
+      <p><strong>Столбцы:</strong> Каждый столбец — тип защиты.</p>
+      <p><strong>Значение:</strong> Процент урона, который проходит через эту защиту.</p>
     </div>
   </section>
   <section id="timings">
@@ -251,7 +237,7 @@
     <p><strong>Как это работает:</strong></p>
     <ul>
       <li><strong>Остановите спавн:</strong> Перестаньте создавать юнитов из всех зданий.</li>
-      <li><strong>Примите бой на своей базе:</strong> Позвольте вражескому стаку войти на вашу территорию. Это позволит вам эффективно сражаться на знакомой местности, используя своего героя и зелья.</li>
+      <li><strong>Примите бой на своей базе:</strong> Позвольте вражескому стаку войти на вашу территорию. Это позволит вам эффективно сражаться на знакомой местности, используя меч и зелья.</li>
       <li><strong>Накопите силы для пуша:</strong> Пока вы будете разбирать вражеский стак на своей базе, ваши юниты будут постепенно накапливаться, создавая мощную армию. После того как вы уничтожите врага, вы сможете использовать эту накопленную силу для мощного контр-пуша.</li>
     </ul>
     <p>Таким образом, оттайм — это не бездействие, а тактическое отступление для подготовки к решающей контратаке.</p>
@@ -271,7 +257,7 @@
         <ul>
           <li>Если вражеский стак состоит из юнитов ближнего боя, бросьте зелье, когда часть их стака уже заагрилась на ваших юнитов дальнего боя. Так вы разделите стак на две части и сможете легче его уничтожить.</li>
           <li>При нападении на базу противника (пуше), используйте зелье, когда его юниты только вышли из зданий. Это позволит вам уничтожить их намного быстрее.</li>
-          <li>При обороне своей базы, важно бросить зелье в момент, когда у врага здания заполнились на половину. Это замедлит их юнитов, и вы не столкнетесь сразу с "дабл стаком" (двойной волной).</li>
+          <li>При обороне своей базы, важно бросить зелье в момент, когда у врага здания заполнились на половину. Это замедлит их юнитов, и вы не столкнетесь сразу с "дабл стаком".</li>
         </ul>
       </li>
     </ul>
@@ -290,14 +276,13 @@
     <ul>
       <li>Кидайте уничтожение на базе противника сразу после того, как он выпустил юнитов и ваши юниты заагрились на них.</li>
       <li>Ближники ускорятся и быстрее дойдут до цели.</li>
-      <li>Дальники замедлятся, но без проблем пройдут до замка, так как вражеские юниты уже не выйдут так быстро и не будут мешать.</li>
+      <li>Дальники замедлятся, но без проблем пройдут до замка, так как вражеские юниты уже не выйдут так быстро.</li>
     </ul>
     <p><strong>Важное замечание:</strong> Перед атакой убедитесь, что противник уже использовал своё замедление и не сможет применить его снова. Это гарантирует лёгкий проход к его замку.</p>
   </section>
   <section id="placement">
     <h2>Расстановка</h2>
     <p>Правильная расстановка зданий — ключ к эффективному спавну и синхронизации юнитов. После обновления с мех-станцией оптимальным вариантом стало размещение <strong>всех зданий в круг</strong> — как обычных, так и специальных.</p>
-    
     <div class="intro">
       <h3>Идеальная схема:</h3>
       <ul>
@@ -305,7 +290,6 @@
         <li><strong>Вокруг неё:</strong> 8 зданий любых — хоть спецздания, хоть обычные (всего 9 зданий в общей схеме).</li>
       </ul>
     </div>
-
     <div class="example">
       <h3>Расстановка по скорости:</h3>
       <p>Расставляйте здания так, как вам удобнее таймить. Учитывайте скорость юнитов, которые из них выходят:</p>
@@ -314,7 +298,6 @@
         <li><strong>Более быстрых юнитов</strong> (дальники, лёгкие) — ставьте <strong>дальше от дороги</strong>.</li>
       </ul>
       <p>Так медленные выходят первыми и сразу идут по дороге, быстрые догоняют сзади — стак синхронизируется идеально!</p>
-      
       <h4>Пример: не на всех юнитах нужны мех-станции</h4>
       <p><strong>Можно ставить мех-станции не на всех юнитах!</strong> Делайте отдельные круги:</p>
       <ul>
@@ -325,10 +308,36 @@
       <p><strong>Почему так делаем:</strong> Спавн-рейт пауков будет практически равен спавн-рейту предков с мех-станцией.</p>
     </div>
   </section>
+  <section id="formulas">
+    <h2>Формулы CastleFight</h2>
+    <p>Точные игровые формулы, подтверждённые разработчиками:</p>
+    <div class="intro">
+      <h3>1. Налог на прибыль</h3>
+      <p class="formula">10% за каждые 25 дохода в 10 секунд</p>
+      <p>Пример: 100 дохода → 40% налог → вы получаете только 60 голды/10 сек</p>
+    </div>
+    <div class="intro">
+      <h3>2. Скорость атаки (тиков)</h3>
+      <p class="formula formula-big">Тики = 40 × (100 ÷ % скорости атаки)</p>
+      <p>Значения <strong>округляются до ближайшего целого</strong></p>
+      <p><strong>Пример:</strong><br>
+         96% скорости → 40 × (100 ÷ 96) = 41.666 → <strong>42 тика</strong> = <strong>2.1 секунды</strong></p>
+    </div>
+    <div class="intro">
+      <h3>3. Монетки за убийство юнита</h3>
+      <p class="formula formula-big">Монетки = Стоимость здания × 0.025</p>
+      <p><strong>Пример:</strong> Здание стоит 200 монет → 200 × 0.025 = <strong>5 монет</strong></p>
+    </div>
+    <div class="intro">
+      <h3>Универсальная формула времени атаки</h3>
+      <p class="formula">Время атаки = Тики × 0.05 сек</p>
+      <p>40 тик = 2.0 сек | 50 тик = 2.5 сек | 30 тик = 1.5 сек</p>
+    </div>
+  </section>
   <section id="tier-list">
     <h2>Тир-лист игроков</h2>
-    <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков сообщества CastleFight по их силе и стратегическому мастерству. Ранжирование происходит от самых сильных игроков (T1) до менее опытных или неактивных (T5). Оценка основана на результатах турниров, калибровочных матчей и общей активности. Игроки, размещённые выше в тире, считаются сильнее.</p>
-    <p>Актуальный тир-лист ведётся в отдельном документе и регулярно обновляется. Он включает подробное распределение по тирам с именами игроков и примечаниями.</p>
+    <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков сообщества CastleFight по их силе и стратегическому мастерству. Ранжирование происходит от самых сильных игроков (T1) до менее опытных или неактивных (T5). Оценка основана на результатах турниров, калибровочных матчей и общей активности.</p>
+    <p>Актуальный тир-лист ведётся в отдельном документе и регулярно обновляется.</p>
     <p><a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><strong>Открыть актуальный Тир-лист игроков</strong></a></p>
   </section>
   <footer>
@@ -337,8 +346,8 @@
     <a href="https://t.me/kasdo_production" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
     <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><i class="fa-solid fa-star"></i> Тир-лист</a>
     <div class="about-site">
-      Версия сайта: <strong>v1.3.2</strong> • Обновлено: 06.11.2025<br>
-      Автор сайта: <strong>LaggerOfPinnGer</strong>
+      Версия сайта: <strong>v1.3.5</strong> • Обновлено: 07.11.2025<br>
+      Автор сайта: <strong>LaggerOfPinnGer</strong><br>
     </div>
   </footer>
   <script>
@@ -347,14 +356,12 @@
       let current = '';
       document.querySelectorAll('section').forEach(sec => {
         const top = window.scrollY;
-        // Учитываем высоту навигации (прилипающего элемента)
         if (top >= sec.offsetTop - 120) current = sec.getAttribute('id');
       });
       navLinks.forEach(a => {
         a.classList.remove('active');
-        // Проверяем, является ли ссылка внутренней
         if (a.getAttribute('href').startsWith('#') && a.getAttribute('href').substring(1) === current) {
-             a.classList.add('active');
+          a.classList.add('active');
         }
       });
     });
