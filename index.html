@@ -1,24 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CastleFight — Инструкция по игре, Гайд, Тайминги, Тир-лист</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#2c3e50">
+
+  <title>CastleFight Cristalix: полный гайд 2025, тайминги, тир-лист, оттаймы, зелья</title>
+  <meta name="description" content="Актуальный гайд по CastleFight на Cristalix 2025: таблица урона, тайминги, оттаймы, зелья, уничтожение, расстановка, тир-лист игроков (v1.3.9 от 08.11.2025).">
+  <meta name="keywords" content="CastleFight гайд, Cristalix CastleFight, Битва Замков гайд, тир лист CastleFight, тайминги CastleFight, оттаймы, зелья, уничтожение, таблица урона, мех-станция">
+
   <link rel="canonical" href="https://laggerofpinngergg.github.io/castlefight-guide/">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <meta name="description" content="Полная инструкция и гайд по CastleFight: таблица урона, тайминги юнитов, тактика оттаймов, раскидка зелий и актуальный тир-лист игроков.">
-  <meta name="keywords" content="CastleFight, Castle Fight, гайд, инструкция, таблица урона, тайминги, оттаймы, тир-лист, стратегия">
-  <meta name="author" content="LaggerOfPinnGer">
-  <meta property="og:title" content="CastleFight: Полный гайд, тайминги и актуальный Тир-лист">
-  <meta property="og:description" content="Изучите таблицу урона, освойте тайминги и тактику оттаймов. Все, чтобы стать топовым игроком CastleFight.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="CastleFight Cristalix: полный гайд 2025, тайминги и тир-лист">
+  <meta property="og:description" content="Самый полный гайд по CastleFight на Cristalix. Таблица урона, оттаймы, зелья, тир-лист (08.11.2025).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://laggerofpinngergg.github.io/castlefight-guide/">
+  <meta property="og:image" content="https://laggerofpinngergg.github.io/castlefight-guide/preview.jpg">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CastleFight: Полный гайд, тайминги и актуальный Тир-лист">
-  <meta name="twitter:description" content="Изучите таблицу урона, освойте тайминги и тактику оттаймов. Все, чтобы стать топовым игроком CastleFight.">
+  <meta name="twitter:title" content="CastleFight Cristalix: гайд 2025, тайминги, тир-лист">
+  <meta name="twitter:description" content="Полный гайд по Битве Замков: таблица урона, оттаймы, зелья, тир-лист (v1.3.9).">
+  <meta name="twitter:image" content="https://laggerofpinngergg.github.io/castlefight-guide/preview.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "CastleFight Cristalix: полный гайд 2025",
+    "description": "Самый полный текстовый гайд по CastleFight на сервере Cristalix. Обновлено 08.11.2025.",
+    "url": "https://laggerofpinngergg.github.io/castlefight-guide/",
+    "inLanguage": "ru-RU",
+    "datePublished": "2025-11-08",
+    "dateModified": "2025-11-08",
+    "author": {"@type": "Person", "name": "LaggerOfPinnGer"}
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root {
       --bg: #f4f4f9;
@@ -28,6 +49,7 @@
       --hover: #e6f3ff;
       --info-bg: #e8f4f8;
       --table-border: #ccc;
+      --num-font: "Segoe UI", Roboto, Arial, sans-serif;
     }
     [data-theme="dark"] {
       --bg: #1e1e1e;
@@ -94,7 +116,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: var(--num-font);
       font-size: 15px;
       border: 1px solid var(--table-border);
     }
@@ -102,6 +124,7 @@
       padding: 10px 14px;
       border: 1px solid var(--table-border);
       text-align: center;
+      font-family: var(--num-font);
     }
     th {
       background-color: var(--accent);
@@ -110,6 +133,27 @@
     }
     tr:nth-child(even) { background-color: var(--hover); }
     [data-theme="dark"] tr:nth-child(even) { background-color: #333; }
+
+    /* ВСЕ ЦИФРЫ И ПРОЦЕНТЫ — ШРИФТ ИЗ ТАБЛИЦЫ УРОНА */
+    .num, .formula, .formula-big, td, th, strong {
+      font-family: var(--num-font) !important;
+      font-weight: 600;
+    }
+    .formula {
+      background: #111;
+      color: #0f0;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 1.15em;
+      display: inline-block;
+      margin: 8px 0;
+      box-shadow: 0 0 10px rgba(0,255,0,0.2);
+    }
+    .formula-big {
+      font-size: 1.4em;
+      padding: 14px 20px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -141,20 +185,8 @@
     }
     .theme-toggle:hover { background: #8b0000; }
     .about-site { font-size: 0.9em; color: #ccc; margin-top: 10px; }
-    .formula {
-      background: #111;
-      color: #0f0;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-family: 'Courier New', monospace;
-      font-size: 1.15em;
-      font-weight: bold;
-      display: inline-block;
-      margin: 8px 0;
-      box-shadow: 0 0 10px rgba(0,255,0,0.2);
-    }
-    .formula-big { font-size: 1.4em; padding: 14px 20px; }
   </style>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MG2T3PM3V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -167,14 +199,17 @@
   <button class="theme-toggle" id="theme-toggle" title="Переключить тему">
     <i class="fa-solid fa-moon"></i>
   </button>
+
   <header>
     <div class="logo">CastleFight</div>
     <h1>Инструкция по игре CastleFight</h1>
   </header>
+
   <div class="intro">
     <h2>Введение</h2>
     <p>CastleFight — это динамичная стратегия в реальном времени, где игроки строят базы, создают армии и сражаются за контроль над картой. Этот гайд не охватывает абсолютно все аспекты и тонкости игры. Он создан специально для <strong>начинающих игроков</strong>, которые уже освоили базовые механики и хотят улучшить свои стратегические навыки.</p>
   </div>
+
   <nav>
     <a href="#damage-table">Таблица урона</a>
     <a href="#timings">Тайминги</a>
@@ -200,19 +235,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>Режущий</td><td>105%</td><td>55%</td><td>190%</td><td>90%</td><td>50%</td></tr>
-        <tr><td>Колющий</td><td>105%</td><td>190%</td><td>90%</td><td>55%</td><td>40%</td></tr>
-        <tr><td>Магический</td><td>105%</td><td>90%</td><td>55%</td><td>190%</td><td>40%</td></tr>
-        <tr><td>Осадный</td><td>105%</td><td>55%</td><td>55%</td><td>55%</td><td>190%</td></tr>
-        <tr><td>Хаос</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr>
+        <tr><td>Режущий</td><td class="num">105%</td><td class="num">55%</td><td class="num">190%</td><td class="num">90%</td><td class="num">50%</td></tr>
+        <tr><td>Колющий</td><td class="num">105%</td><td class="num">190%</td><td class="num">90%</td><td class="num">55%</td><td class="num">40%</td></tr>
+        <tr><td>Магический</td><td class="num">105%</td><td class="num">90%</td><td class="num">55%</td><td class="num">190%</td><td class="num">40%</td></tr>
+        <tr><td>Осадный</td><td class="num">105%</td><td class="num">55%</td><td class="num">55%</td><td class="num">55%</td><td class="num">190%</td></tr>
+        <tr><td>Хаос</td><td class="num">100%</td><td class="num">100%</td><td class="num">100%</td><td class="num">100%</td><td class="num">100%</td></tr>
       </tbody>
     </table>
     <div class="example">
       <h3>Пример:</h3>
       <ul>
-        <li>Режущий урон по средней броне наносит <strong>190%</strong> урона от базового.</li>
-        <li>Магический урон по тяжёлой броне наносит <strong>190%</strong> урона от базового.</li>
-        <li>Осадный урон по укреплённой защите наносит <strong>190%</strong> урона от базового.</li>
+        <li>Режущий урон по средней броне наносит <strong class="num">190%</strong> урона от базового.</li>
+        <li>Магический урон по тяжёлой броне наносит <strong class="num">190%</strong> урона от базового.</li>
+        <li>Осадный урон по укреплённой защите наносит <strong class="num">190%</strong> урона от базового.</li>
       </ul>
     </div>
     <div class="how-to-read">
@@ -262,7 +297,7 @@
         <ul>
           <li>Если вражеский стак состоит из юнитов ближнего боя, бросьте зелье, когда часть их стака уже заагрилась на ваших юнитов дальнего боя. Так вы разделите стак на две части и сможете легче его уничтожить.</li>
           <li>При нападении на базу противника (пуше), используйте зелье, когда его юниты только вышли из зданий. Это позволит вам уничтожить их намного быстрее.</li>
-          <li>При обороне своей базы, важно бросить зелье в момент, когда у врага здания заполнились на половину. Это замедлит их юнитов, и вы не столкнетесь сразу с "дабл стаком".</li>
+          <li>При обороне своей базы, важно бросить зелье в момент, когда у врага здания заполнились на <strong class="num">50%</strong>. Это замедлит их юнитов, и вы не столкнетесь сразу с "дабл стаком".</li>
         </ul>
       </li>
     </ul>
@@ -294,7 +329,7 @@
       <h3>Идеальная схема:</h3>
       <ul>
         <li><strong>По центру:</strong> Мех-станция.</li>
-        <li><strong>Вокруг неё:</strong> 8 зданий любых — хоть спецздания, хоть обычные (всего 9 зданий в общей схеме).</li>
+        <li><strong>Вокруг неё:</strong> <strong class="num">8</strong> зданий любых — хоть спецздания, хоть обычные (всего <strong class="num">9</strong> зданий в общей схеме).</li>
       </ul>
     </div>
     <div class="example">
@@ -308,8 +343,8 @@
       <h4>Пример: не на всех юнитах нужны мех-станции</h4>
       <p><strong>Можно ставить мех-станции не на всех юнитах!</strong> Делайте отдельные круги:</p>
       <ul>
-        <li><strong>Круг 1:</strong> 9 пауков <em>без мех-станции</em>.</li>
-        <li><strong>Круг 2:</strong> 8 служителей (предков) <em>с мех-станцией</em> в центре.</li>
+        <li><strong>Круг 1:</strong> <strong class="num">9</strong> пауков <em>без мех-станции</em>.</li>
+        <li><strong>Круг 2:</strong> <strong class="num">8</strong> служителей (предков) <em>с мех-станцией</em> в центре.</li>
         <li><strong>Оставшиеся слоты:</strong> Мех-станция на спецздания + легендарки.</li>
       </ul>
       <p><strong>Почему так делаем:</strong> Спавн-рейт пауков будет практически равен спавн-рейту предков с мех-станцией.</p>
@@ -321,65 +356,59 @@
     <p>Точные игровые формулы, подтверждённые разработчиками:</p>
     <div class="intro">
       <h3>1. Налог на прибыль</h3>
-      <p class="formula">10% за каждые 25 дохода в 10 секунд</p>
-      <p>Пример: 100 дохода → 40% налог → вы получаете только 60 голды/10 сек</p>
+      <p class="formula num">10% за каждые 25 дохода в 10 секунд</p>
+      <p>Пример: <strong class="num">100</strong> дохода → <strong class="num">40%</strong> налог → вы получаете только <strong class="num">60</strong> голды/<strong class="num">10</strong> сек</p>
     </div>
     <div class="intro">
       <h3>2. Скорость атаки (тиков)</h3>
-      <p class="formula formula-big">Тики = 40 × (100 ÷ % скорости атаки)</p>
+      <p class="formula formula-big num">Тики = 40 × (100 ÷ % скорости атаки)</p>
       <p>Значения <strong>округляются до ближайшего целого</strong></p>
       <p><strong>Пример:</strong><br>
-         96% скорости → 40 × (100 ÷ 96) = 41.666 → <strong>42 тика</strong> = <strong>2.1 секунды</strong></p>
+         <strong class="num">96%</strong> скорости → <strong class="num">40</strong> × (<strong class="num">100</strong> ÷ <strong class="num">96</strong>) = <strong class="num">41.666</strong> → <strong class="num">42</strong> тика = <strong class="num">2.1</strong> секунды</p>
     </div>
     <div class="intro">
       <h3>3. Монетки за убийство юнита</h3>
-      <p class="formula formula-big">Монетки = Стоимость здания × 0.025</p>
-      <p><strong>Пример:</strong> Здание стоит 200 монет → 200 × 0.025 = <strong>5 монет</strong></p>
+      <p class="formula formula-big num">Монетки = Стоимость здания × 0.025</p>
+      <p><strong>Пример:</strong> Здание стоит <strong class="num">200</strong> монет → <strong class="num">200</strong> × <strong class="num">0.025</strong> = <strong class="num">5</strong> монет</p>
     </div>
     <div class="intro">
       <h3>Универсальная формула времени атаки</h3>
-      <p class="formula">Время атаки = Тики × 0.05 сек</p>
-      <p>40 тик = 2.0 сек | 50 тик = 2.5 сек | 30 тик = 1.5 сек</p>
+      <p class="formula num">Время атаки = Тики × 0.05 сек</p>
+      <p><strong class="num">40</strong> тик = <strong class="num">2.0</strong> сек | <strong class="num">50</strong> тик = <strong class="num">2.5</strong> сек | <strong class="num">30</strong> тик = <strong class="num">1.5</strong> сек</p>
     </div>
-
-    <!-- НОВАЯ ФОРМУЛА — ДОБАВЛЕНА ЗДЕСЬ -->
     <div class="intro">
       <h3>4. Доход здания без налога </h3>
-      <p class="formula formula-big">G = <sup>N</sup>&frasl;<sub>1 − r</sub></p>
+      <p class="formula formula-big num">G = <sup>N</sup>&frasl;<sub>1 − r</sub></p>
       <p><strong>G</strong> — валовой доход здания (до налога)<br>
          <strong>N</strong> — чистый доход, который ты видишь в игре<br>
-         <strong>r</strong> — ставка налога <u>в долях</u> (20 % = 0.2)</p>
-      
+         <strong>r</strong> — ставка налога <u>в долях</u> (<strong class="num">20%</strong> = <strong class="num">0.2</strong>)</p>
       <div class="example">
         <h3>Пример:</h3>
-        <p>Здание даёт <strong>+14</strong> к доходу, текущий налог <strong>20 %</strong> (r = 0.2)</p>
-        <p class="formula">G = 14 ÷ (1 − 0.2) = 14 ÷ 0.8 = <strong>17.5</strong></p>
-        <p>→ без налога здание даёт <strong>17.5</strong> дохода которые округляются до 18 тоесть получим в итоге +18 дохода.</p>
+        <p>Здание даёт <strong class="num">+14</strong> к доходу, текущий налог <strong class="num">20%</strong> (r = <strong class="num">0.2</strong>)</p>
+        <p class="formula num">G = 14 ÷ (1 − 0.2) = 14 ÷ 0.8 = <strong class="num">17.5</strong></p>
+        <p>→ без налога здание даёт <strong class="num">17.5</strong> дохода → округляется до <strong class="num">18</strong></p>
       </div>
-      
       <p><strong>Как пользоваться:</strong><br>
-        1. Узнай текущий налог (зависит от общего дохода).<br>
-        2. Подставь чистый доход <strong>N</strong> и налог <strong>r</strong> в формулу.<br>
-        3. Получишь настоящий (валовой) доход здания.</p>
+        1. Узнай текущий налог.<br>
+        2. Подставь N и r в формулу.<br>
+        3. Получишь настоящий доход здания.</p>
     </div>
-    <!-- КОНЕЦ НОВОЙ ФОРМУЛЫ -->
-
   </section>
 
   <section id="tier-list">
     <h2>Тир-лист игроков</h2>
-    <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков сообщества CastleFight по их силе и стратегическому мастерству. Ранжирование происходит от самых сильных игроков (T1) до менее опытных или неактивных (T5). Оценка основана на результатах турниров, калибровочных матчей и общей активности.</p>
+    <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков сообщества CastleFight по их силе и стратегическому мастерству. Ранжирование происходит от самых сильных игроков (<strong class="num">T1</strong>) до менее опытных или неактивных (<strong class="num">T5</strong>). Оценка основана на результатах турниров, калибровочных матчей и общей активности.</p>
     <p>Актуальный тир-лист ведётся в отдельном документе и регулярно обновляется.</p>
-    <p><a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><strong>Открыть актуальный Тир-лист игроков</strong></a></p>
+    <p><a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit" target="_blank"><strong>Открыть актуальный Тир-лист игроков</strong></a></p>
   </section>
 
   <footer>
     <p>Присоединяйтесь к сообществу CastleFight:</p>
     <a href="https://discord.gg/jDP3HwMSdd" target="_blank"><i class="fab fa-discord"></i> Discord</a>
     <a href="https://t.me/+BQR30DczoB4zNzIy" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank"><i class="fa-solid fa-star"></i> Тир-лист</a>
+    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit" target="_blank"><i class="fa-solid fa-star"></i> Тир-лист</a>
     <div class="about-site">
-      Версия сайта: <strong>v1.3.6</strong> • Обновлено: 07.11.2025<br>
+      Версия сайта: <strong class="num">v1.3.9</strong> • Обновлено: <strong class="num">08.11.2025</strong><br>
       Автор сайта: <strong>LaggerOfPinnGer</strong><br>
     </div>
   </footer>
@@ -399,6 +428,7 @@
         }
       });
     });
+
     const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn.addEventListener('click', () => {
       const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
