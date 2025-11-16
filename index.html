@@ -1,5 +1,6 @@
-
-<!DOCTYPE html><html lang="ru"><head>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
@@ -8,7 +9,7 @@
   <meta name="yandex-verification" content="22ffcf6ca9a34ce3" />
   <title>CastleFight Cristalix мини-гайд</title>
   <meta name="description" content="CastleFight Cristalix мини-гайд">
-  <meta name="keywords" content="CastleFight гайд, Cristalix CastleFight, Битва Замков гайд, тир лист CastleFight, тайминги CastleFight, оттаймы, зелья, уничтожение, таблица урона, мех-станция">
+  <meta name="keywords" content="CastleFight гайд, Cristalix CastleFight, Битва Замков гайд, тир лист CastleFight, тайминги CastleFight, оттаймы, зелья, уничтожение, таблица урона, мех-станция, ресурспаки">
   <link rel="canonical" href="https://laggerofpinngergg.github.io/castlefight-guide/">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta property="og:title" content="CastleFight Cristalix мини-гайд">
@@ -166,8 +167,8 @@
       box-shadow: 0 0 10px rgba(0,255,0,0.2);
     }
     .formula-big { font-size: 1.4em; padding: 14px 20px; }
-    .tier-button {
-      display: inline-block;
+    .tier-button, .download-tier-button { /* Объединяем стили для одинакового внешнего вида */
+      display: block; /* Изменено на block для кнопок скачивания, чтобы они занимали всю ширину контейнера */
       background: linear-gradient(135deg, var(--accent), #34495e);
       color: #fff;
       padding: 14px 32px;
@@ -177,15 +178,42 @@
       font-size: 18px;
       box-shadow: 0 5px 18px rgba(44,62,80,0.5);
       transition: all 0.3s ease;
-      margin: 20px 0;
+      margin: 20px auto; /* Центрирование */
       border: none;
       cursor: pointer;
+      text-align: center;
+      width: 80%; /* Ограничиваем ширину для лучшего вида */
+      max-width: 400px;
     }
-    .tier-button:hover {
+    .tier-button:hover, .download-tier-button:hover {
       transform: translateY(-4px);
       box-shadow: 0 10px 30px rgba(44,62,80,0.7);
       background: linear-gradient(135deg, #34495e, var(--accent));
     }
+    
+    /* Стилизация для отдельных блоков ресурспаков */
+    .resource-pack-item {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid var(--table-border);
+        border-radius: 8px;
+        background-color: var(--card);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        transition: background 0.3s;
+        text-align: center;
+    }
+    [data-theme="dark"] .resource-pack-item { border: 1px solid #444; background-color: #333; }
+
+    /* Отменяем блочность для оригинальной кнопки Тир-листа, чтобы она сохранила старый margin-top: 20px */
+    #tier-list .tier-button {
+      display: inline-block;
+    }
+    /* Добавляем отступ для кнопок скачивания внутри их контейнера */
+    .resource-pack-item .download-tier-button {
+        margin: 15px auto 5px auto;
+        font-size: 16px; /* Чуть меньший шрифт для кнопок внутри секции */
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -258,7 +286,8 @@
     <a href="#placement">6. Расстановка</a>
     <a href="#spawn-cooldowns">7. Кулдаун спавна</a>
     <a href="#formulas">8. Формулы</a>
-    <a href="#tier-list">9. Тир-лист</a>
+    <a href="#resource-packs">9. Ресурспаки</a>
+    <a href="#tier-list">10. Тир-лист</a>
   </nav>
   <section id="damage-table">
     <h2>1. Таблица урона</h2>
@@ -493,12 +522,54 @@
       </div>
     </div>
   </section>
+  
+  <section id="resource-packs">
+    <h2>9. Интересные ресурспаки</h2>
+    <p>Здесь собраны полезные ресурспаки, которые могут улучшить ваше визуальное и игровое восприятие CastleFight.</p>
+    <div class="intro">
+      
+      <div class="resource-pack-item">
+        <h3>1. CastleFight (Старый стиль)</h3>
+        <p>Данный ресурспак возвращает <strong>оригинальные модели и текстуры рас</strong> до последних обновлений, если вы предпочитаете классический вид.</p>
+        <a href="https://github.com/user-attachments/files/23569980/CastleFight.zip" target="_blank" class="download-tier-button">
+          <i class="fa-solid fa-download"></i> Скачать CastleFight.zip
+        </a>
+      </div>
+
+      <div class="resource-pack-item">
+        <h3>2. GridLock (Четкие границы)</h3>
+        <p>Пак, который делает <strong>четкие границы (outline) на всех блоках</strong>, что улучшает видимость и ориентацию в пространстве.</p>
+        <a href="https://github.com/user-attachments/files/23570055/GridLock.zip" target="_blank" class="download-tier-button">
+          <i class="fa-solid fa-download"></i> Скачать GridLock.zip
+        </a>
+      </div>
+
+      <div class="resource-pack-item">
+        <h3>3. NoRed (Убирает красный экран)</h3>
+        <p>Этот ресурспак отключает эффект <strong>красного экрана/вспышки</strong> при получении урона или атаке вашего замка, делая игру менее раздражающей в критические моменты.</p>
+        <a href="https://github.com/user-attachments/files/23570056/NoRed.zip" target="_blank" class="download-tier-button">
+          <i class="fa-solid fa-download"></i> Скачать NoRed.zip
+        </a>
+      </div>
+    </div>
+    
+    <div class="example">
+        <h3>Как установить ресурспак:</h3>
+        <ol>
+            <li>Скачайте нужный файл по ссылке выше.</li>
+            <li>Откройте папку с ресурспаками в вашем Minecraft-клиенте.</li>
+            <li>Переместите скачанный ZIP-архив (не распаковывая) в папку с ресурспаками.</li>
+            <li>Активируйте его в настройках игры.</li>
+        </ol>
+    </div>
+  </section>
   <section id="tier-list">
-    <h2>9. Тир-лист игроков</h2>
+    <h2>10. Тир-лист игроков</h2>
     <p>Тир-лист (от англ. "Tier list") — это рейтинг, который ранжирует игроков сообщества CastleFight по их силе и стратегическому мастерству. Ранжирование происходит от <strong>самых сильных игроков</strong> (T1) до <strong>менее опытных или неактивных</strong> (T5). Оценка основана на <strong>результатах турниров, калибровочных матчей</strong> и <strong>общей активности</strong>. Игроки, размещённые выше в тире, считаются сильнее.</p>
     <p>Актуальный тир-лист ведётся в <strong>отдельном документе</strong> и <strong>регулярно обновляется</strong>. Он включает <strong>подробное распределение</strong> по тирам с именами игроков и примечаниями.</p>
-    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank" class="tier-button">Открыть актуальный Тир-лист игроков</a>
+    <a href="https://docs.google.com/document/d/13l1vSId28B2fmn8RnK8jZNkPAdhrUChMxpjRnbzGEcU/edit?tab=t.w7c3h16u4371#heading=h.a4udrcu57bqm" target="_blank" class="tier-button" style="display: inline-block; width: auto; max-width: none; padding: 14px 40px;">Открыть актуальный Тир-лист игроков</a>
   </section>
+  
   <footer>
     <p>Присоединяйтесь к сообществу CastleFight:</p>
     <a href="https://discord.gg/castlefight" target="_blank"><i class="fab fa-discord"></i> Discord</a>
@@ -515,10 +586,12 @@
       let current = '';
       document.querySelectorAll('section').forEach(sec => {
         const top = window.scrollY;
+        // Уменьшаем отступ для секции, чтобы активная ссылка менялась раньше
         if (top >= sec.offsetTop - 120) current = sec.getAttribute('id');
       });
       navLinks.forEach(a => {
         a.classList.remove('active');
+        // Проверяем, что ссылка является якорем и соответствует текущей секции
         if (a.getAttribute('href').startsWith('#') && a.getAttribute('href').substring(1) === current) {
           a.classList.add('active');
         }
@@ -537,4 +610,5 @@
       toggleBtn.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
     }
   </script>
-</body></html>
+</body>
+</html>
